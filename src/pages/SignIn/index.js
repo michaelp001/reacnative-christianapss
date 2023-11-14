@@ -20,9 +20,7 @@ const SignIn = ({navigation}) => {
 
   const AuthLogin = async()=>{
     try{
-      setLoading({
-        loadingLogin:true
-      })
+      setLoading({loadingLogin:true})
       const response = await fetch("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyB1i3t3bufE6CmYCPfaZkBUsAwmwqm7yio",{
         method:"POST",
         headers:{
@@ -35,16 +33,18 @@ const SignIn = ({navigation}) => {
           })
         })
       const resData = await response.json()
-      if(resData.ok){
-        navigation.navigate('MainApp')
+      if(response.ok){
+        console.log('masuk pak eko')
+        await navigation.navigate('MainApp');
       } else{
         Alert.alert('An Error Occured!!',resData.error.message,[{
-          text:'Okay'
+          text:'Okay',
         }])
       }
       setLoading({loadingLogin:false})
     }catch (error){
       console.log(error)
+      setLoading({loadingLogin:false})
     }
   }
 
@@ -86,7 +86,10 @@ const SignIn = ({navigation}) => {
       </View>
 
       <View style={{marginHorizontal:30,marginTop:30}}>
-         {loading.loadingLogin ? <ActivityIndicator size="small" color="white"/>:<Button style={{color:"black"}} onPress={AuthLogin}>Login</Button>}
+          <Button  onPress={AuthLogin} text="Login">
+             {loading.loadingLogin ? <ActivityIndicator size="small" color="white"/>:<Text style={{color:"black"}}>Login</Text>}
+          </Button>
+
       </View>
 
       <View style={{marginHorizontal:30,marginTop:10}}>
