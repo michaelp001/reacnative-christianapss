@@ -2,7 +2,7 @@ import React from "react";
 import { createStackNavigator } from '@react-navigation/stack';
 import { Events, Home, MyCalendar, Message,MyProfile, 
     SplashScreen,NextPage,SignIn,SignUp,Welcome,Renungan,JadwalDoa
-,RenunganHarian } from "../pages";
+,RenunganHarian,MyProfileDetails } from "../pages";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BottomNavigator } from "../components/molecules";
 
@@ -40,6 +40,7 @@ const Router = () => {
             <Stack.Screen name="Message" component={Message} options={{headerShown: false}}/>
             <Stack.Screen name="MyCalendar" component={MyCalendar} options={{headerShown: false}}/>
             <Stack.Screen name="RenunganHarian" component={RenunganHarian} options={{headerShown: false}}/>
+            <Stack.Screen name="MyProfileDetails" component={MyProfileDetails} options={{headerShown: false}}/>
 
             
             

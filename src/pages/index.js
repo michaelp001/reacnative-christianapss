@@ -3,6 +3,7 @@ import Home from "./Home";
 import MyCalendar from "./MyCalendar";
 import Events from "./Events";
 import MyProfile from "./MyProfile";
+import MyProfileDetails from "./MyProfile/MyProfileDetails";
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import Welcome from './Welcome';
@@ -30,6 +31,7 @@ export{
     JadwalDoa,
     Groups,
     Message,
-    RenunganHarian
+    RenunganHarian,
+    MyProfileDetails
 
 }

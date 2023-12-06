@@ -22,7 +22,7 @@ const MyProfile = ({navigation,onPress}) => {
             <Image source={John_due}/>
             <Text style={styles.fontname}>JOHN DOE</Text>
               <TouchableOpacity activeOpacity={0.7} style={styles.buttonedit}>
-                <Text style={styles.fontedit}>EDIT PROFILE</Text>
+                <Text style={styles.fontedit} onPress={()=> navigation.navigate('MyProfileDetails')}>EDIT PROFILE</Text>
               </TouchableOpacity>
           </View>
 
@@ -103,17 +103,3 @@ const styles = StyleSheet.create({
   
   
 })
-{/* const styles = StyleSheet.create({
-  container:{flex:1,backgroundColor:'red'},
-  topmenu :{flexDirection:'row',justifyContent:'space-between',alignItems:'center',marginVertical: 15,marginHorizontal:30},
-  fontFavorite : {color:'white', fontWeight:'500' , fontSize:24},
-  subcontainer:{flex:1,backgroundColor:'white',borderTopLeftRadius:30,borderBottomRightRadius:30},
-  detail: {marginTop:15,backgroundColor:'white',borderRadius:15,marginHorizontal:30, marginVertical:15,elevation:10,shadowColor:'black'},
-  infodetail:{flexDirection:'row',justifyContent:'space-between', paddingHorizontal:20,paddingTop:10},
-  fontname:{fontSize:16,fontWeight:'500',color:'black'},
-  rate:{flexDirection:'row',marginTop:5},
-  infodetail2:{flexDirection:'row',justifyContent:'space-between',paddingHorizontal:20,paddingVertical:10},
-  fontlocation:{marginLeft:5,fontSize:10,color:'red'},
-  fontprice:{fontSize:16,color:'red',fontWeight:'500'}
-  
-})*/}

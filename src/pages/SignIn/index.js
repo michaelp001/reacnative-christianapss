@@ -34,7 +34,6 @@ const SignIn = ({navigation}) => {
         })
       const resData = await response.json()
       if(response.ok){
-        console.log('masuk pak eko')
         await navigation.navigate('MainApp');
       } else{
         Alert.alert('An Error Occured!!',resData.error.message,[{

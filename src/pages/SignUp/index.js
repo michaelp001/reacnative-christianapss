@@ -24,7 +24,8 @@ const SignUp = ({navigation}) => {
       })
     })
     const resData = await response.json()
-    if(resData.ok){
+    if(response.ok){
+      Alert.alert('Register Success!')
       navigation.navigate('MainApp')
     } else{
       Alert.alert('An Error Occured!!',resData.error.message,[{
